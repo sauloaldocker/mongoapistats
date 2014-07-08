@@ -1,0 +1,7 @@
+ENTRYPOINT      ( /usr/sbin/sshd ) && \
+                ( /usr/bin/nohup /usr/bin/mongod --rest & ) && \
+                ( cd /Fang-of-Mongo/fangofmongo; /usr/bin/nohup /usr/bin/python manage.py runserver 0.0.0.0:8000 & )  &&  \
+                ( cd /andzdroid-mongo-express-*; /usr/bin/nohup /usr/bin/npm start   & )  && \
+                ( /usr/bin/nohup /usr/bin/python /sleepy.mongoose/httpd.py --xorigin & )  && \
+                ( cd /mViewer;                   /usr/bin/nohup /bin/bash /mViewer/start_mViewer.sh )
+
