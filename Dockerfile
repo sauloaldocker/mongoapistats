@@ -113,7 +113,7 @@ ADD	mviewer.service.conf      /etc/supervisor/conf.d/mviewer.service.conf
 #ENTRYPOINT ["bash"]
 
 #CMD     "supervisor -c /etc/supervisor.conf"
-CMD /run.sh
+CMD	/bin/bash /run.sh
 
 
 
